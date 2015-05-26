@@ -1,0 +1,34 @@
+---
+# Inspired by https://github.com/wickman/python-bootstrap/
+galaxy_info:
+  author: Evan Meagher
+  description: Install specific versions of Python and Python packaging tools
+  company: Whisker Labs
+  license: MIT
+  min_ansible_version: 1.9
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  categories:
+    #- cloud
+    #- cloud:ec2
+    #- cloud:gce
+    #- cloud:rax
+    #- clustering
+    #- database
+    #- database:nosql
+    #- database:sql
+    - development
+    #- monitoring
+    #- networking
+    #- packaging
+    - system
+    #- web
+dependencies:
+  - role: common

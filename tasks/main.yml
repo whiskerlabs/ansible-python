@@ -1,0 +1,45 @@
+---
+- include_vars: "main.yml"
+
+- name: create sandbox directory
+  file:
+    path: "{{python_sandbox_path}}"
+    state: directory
+
+- name: ensure that python installation directory exists
+  file:
+    path: "{{python_install_root}}"
+    state: directory
+
+- name: download source tarballs
+  get_url:
+    url: "{{item.url}}"
+    dest: "{{item.dest}}"
+  with_items:
+    - url: "{{python_readline_6_2_tgz_url}}"
+      dest: "{{python_readline_6_2_tgz_local_path}}"
+    - url: "{{python_tgz_url}}"
+      dest: "{{python_tgz_local_path}}"
+    - url: "{{python_setuptools_tgz_url}}"
+      dest: "{{python_setuptools_tgz_local_path}}"
+    - url: "{{python_pip_tgz_url}}"
+      dest: "{{python_pip_tgz_local_path}}"
+
+- name: unarchive source tarballs
+  unarchive:
+    copy: no
+    src: "{{item}}"
+    dest: "{{python_sandbox_path}}"
+  with_items:
+    - "{{python_readline_6_2_tgz_local_path}}"
+    - "{{python_tgz_local_path}}"
+    - "{{python_setuptools_tgz_local_path}}"
+    - "{{python_pip_tgz_local_path}}"
+
+- include: readline.yml
+- include: python.yml
+
+- name: remove sandbox directory
+  file:
+    path: "{{python_sandbox_path}}"
+    state: absent

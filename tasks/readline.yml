@@ -1,0 +1,15 @@
+---
+- name: configure a makefile for readline 6.2
+  shell: ./configure {{python_readline_6_2_configure_options}}
+  args:
+    chdir: "{{python_sandbox_path}}/readline-6.2"
+
+- name: build readline 6.2 from source
+  shell: make -j3
+  args:
+    chdir: "{{python_sandbox_path}}/readline-6.2"
+
+- name: install readline 6.2 in the python installation sandbox
+  shell: make install
+  args:
+    chdir: "{{python_sandbox_path}}/readline-6.2"

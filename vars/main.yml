@@ -1,0 +1,35 @@
+---
+# apt package dependencies.
+# These libraries are sufficient to build most core Python modules
+# (e.g. ssl, bz2), but the following may not be built:
+#
+#     _bsddb    _curses    _curses_panel
+#     _sqlite3  _tkinter   bsddb185
+#     dbm       dl         gdbm
+#     imageop   sunaudiodev
+python_package_deps:
+  - build-essential
+  - libbz2-dev
+  - libssl-dev
+  - openssl
+  - zlib1g-dev
+
+# readline 6.2 tarball paths
+python_readline_6_2_tgz_file_name: readline-6.2.tar.gz
+python_readline_6_2_tgz_url: ftp://ftp.cwru.edu/pub/bash/readline-6.2.tar.gz
+python_readline_6_2_tgz_local_path: "{{python_sandbox_path}}/{{python_readline_6_2_tgz_file_name}}"
+
+# Python tarball paths
+python_tgz_file_name: Python-{{python_version}}.tgz
+python_tgz_url: http://python.org/ftp/python/{{python_version}}/{{python_tgz_file_name}}
+python_tgz_local_path: "{{python_sandbox_path}}/{{python_tgz_file_name}}"
+
+# Setuptools tarball paths
+python_setuptools_tgz_file_name: setuptools-{{python_setuptools_version}}.tar.gz
+python_setuptools_tgz_url: https://pypi.python.org/packages/source/s/setuptools/{{python_setuptools_tgz_file_name}}
+python_setuptools_tgz_local_path: "{{python_sandbox_path}}/{{python_setuptools_tgz_file_name}}"
+
+# pip tarball paths
+python_pip_tgz_file_name: pip-{{python_pip_version}}.tar.gz
+python_pip_tgz_url: http://pypi.python.org/packages/source/p/pip/{{python_pip_tgz_file_name}}
+python_pip_tgz_local_path: "{{python_sandbox_path}}/{{python_pip_tgz_file_name}}"

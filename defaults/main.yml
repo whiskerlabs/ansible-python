@@ -1,0 +1,23 @@
+---
+# Target versions
+python_version: 2.7.9
+python_setuptools_version: 12.0.5
+python_pip_version: 6.0.8
+
+# Path to a temporary sandbox directory within which to download,
+# extract, and build source tarballs. This directory is removed after
+# installation is complete.
+python_sandbox_path: /tmp/python
+
+# Path to a directory in which to install Python and related tooling.
+python_install_root: /usr/local
+
+# The Python installation's bin directory. Helpful when invoking
+# `python` or `pip` from Ansible.
+python_bin: "{{python_install_root}}/bin"
+
+# Options passed to `./configure` when building readline 6.2
+python_readline_6_2_configure_options: --disable-shared --enable-static --prefix={{python_sandbox_path}}/readline
+
+# Options passed to `./configure` when building Python.
+python_configure_options: --prefix={{python_install_root}}
