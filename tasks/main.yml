@@ -38,6 +38,7 @@
 
 - include: readline.yml
 - include: python.yml
+- include: packaging_tools.yml
 
 - name: remove sandbox directory
   file:
