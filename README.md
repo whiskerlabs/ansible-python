@@ -4,9 +4,11 @@ An Ansible role for installing a sane Python execution environment.
 
 This role installs target versions of the Python programming language,
 Setuptools, and pip, all from source. Virtualenv is then installed
-with pip. Its tasks largely comprise the installation process set
-forth by
-[Brian Wickman's bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
+with pip.
+
+Installation procedure is, for the most part, cribbed from Brian
+Wickman's
+[bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
 
 ## Requirements
 
