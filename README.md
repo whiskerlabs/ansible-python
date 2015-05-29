@@ -2,10 +2,10 @@
 
 An Ansible role for installing a sane Python execution environment.
 
-This role installs target versions of a) the Python programming
-language, b) Setuptools, and c) pip, all from source. Virtualenv is
-then installed with pip. Its tasks largely comprise the installation
-process set forth by
+This role installs target versions of the Python programming language,
+Setuptools, and pip, all from source. Virtualenv is then installed
+with pip. Its tasks largely comprise the installation process set
+forth by
 [Brian Wickman's bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
 
 ## Requirements
@@ -14,7 +14,21 @@ Tested on Ansible 1.9.x.
 
 ## Installation
 
+With Ansible Galaxy:
+
     $ ansible-galaxy install whiskerlabs.python
+
+Or alternatively, add the path to a local copy of this repository to
+`roles_path` within your project's `ansible.cfg` file:
+
+    roles_path = /path/to/role_dir
+
+where `/path/to/role_dir` is a parent directory of `ansible-python`.
+
+Consult
+[Ansible documentation](http://docs.ansible.com/intro_configuration.html)
+for more info on how to configure `roles_path` in an Ansible
+configuration file.
 
 ## Testing
 
