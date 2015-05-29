@@ -13,11 +13,19 @@
     - dir: pip-{{python_pip_version}}
       bin: pip
 
-- name: upgrade pip and install virtualenv
+- name: install virtualenv
+  pip:
+    name: virtualenv
+    version: "{{python_virtualenv_version}}"
+    executable: "{{python_bin}}/pip"
+
+- name: upgrade packaging tools
   pip:
     name: "{{item}}"
     state: latest
     executable: "{{python_bin}}/pip"
   with_items:
+    - setuptools
     - pip
     - virtualenv
+  when: python_upgrade_packaging_tools

@@ -6,13 +6,17 @@ This role installs target versions of the Python programming language,
 Setuptools, and pip, all from source. Virtualenv is then installed
 with pip.
 
-Installation procedure is, for the most part, cribbed from Brian
-Wickman's
-[bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
+By default, the packaging tools (i.e. setuptools, pip, and virtualenv)
+are upgraded to their latest versions. This functionality can be
+disabled by setting the variable `python_upgrade_packaging_tools` to
+`no`.
 
 ## Requirements
 
 Tested on Ansible 1.9.x.
+
+It likely works on older versions, but we haven't had occasion to
+check. README patches welcome if this requirement needs amending.
 
 ## Installation
 
@@ -36,10 +40,10 @@ configuration file.
 
 A Vagrantfile is provided for use in testing the role during
 development. With it, this role's tasks are run (via a test.yml
-example playbook)in a bare Ubuntu 14.04 virtual machine.
+example playbook) in a bare Ubuntu 14.04 virtual machine.
 
-Simply run `vagrant up` from the root of this repository to launch and
-provision a VM.
+Provided Vagrant and Virtualbox are installed, run `vagrant up` from
+the root of this repository to launch and provision a VM.
 
 ## Variables
 
@@ -50,7 +54,14 @@ for an exaustive list, but the following are the most likely knobs to
 be turned:
 
     python_version (default: 2.7.9)
+    python_upgrade_packaging_tools: (default: yes)
     python_setuptools_version (default: 12.0.5)
     python_pip_version (default: 6.0.8)
     python_install_root (default: /usr/local)
     python_package_deps (default: [build-essential, libbz2-dev, libssl-dev, openssl, zlib1g-dev])
+
+## Credits
+
+Installation procedure is, for the most part, cribbed from Brian
+Wickman's
+[bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
