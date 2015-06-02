@@ -1,6 +1,4 @@
 ---
-- include_vars: "main.yml"
-
 - name: create sandbox directory
   file:
     path: "{{python_sandbox_path}}"
