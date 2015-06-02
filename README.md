@@ -1,5 +1,7 @@
 # ansible-python
 
+[![Ansible Galaxy](http://img.shields.io/badge/galaxy-whiskerlabs.python-660198.svg)](https://galaxy.ansible.com/list#/roles/4007)
+
 An Ansible role for installing a sane Python execution environment.
 
 This role installs (from source) target versions of the Python programming language,
