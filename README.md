@@ -60,8 +60,21 @@ be turned:
     python_install_root (default: /usr/local)
     python_package_deps (default: [build-essential, libbz2-dev, libssl-dev, openssl, zlib1g-dev])
 
+## Support
+
+For questions or bug reports, please
+[file an issue on Github](https://github.com/whiskerlabs/ansible-python/issues).
+
+For any other inquiries, send mail to `software at whiskerlabs.com`.
+
 ## Credits
 
 Installation procedure is, for the most part, cribbed from Brian
 Wickman's
 [bootstrap_python.sh script](https://github.com/wickman/python-bootstrap/).
+
+## License
+
+Copyright 2015 Whisker Labs
+
+Licensed under the MIT License. See LICENSE for details.
