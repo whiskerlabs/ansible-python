@@ -52,10 +52,10 @@ apt packages to install. See `defaults/main.yml` and `vars/main.yml`
 for an exaustive list, but the following are the most likely knobs to
 be turned:
 
-    python_version (default: 2.7.9)
-    python_setuptools_version (default: 17.0)
-    python_pip_version (default: 7.0.1)
-    python_virtualenv_version (default: 13.0.1)
+    python_version (default: 2.7.10)
+    python_setuptools_version (default: 17.1.1)
+    python_pip_version (default: 7.0.3)
+    python_virtualenv_version (default: 13.0.3)
     python_upgrade_packaging_tools: (default: yes)
     python_install_root (default: /usr/local)
     python_package_deps (default: [build-essential, libbz2-dev, libssl-dev, openssl, zlib1g-dev])
