@@ -14,7 +14,7 @@ disabled by setting the variable `python_upgrade_packaging_tools` to
 
 ## Installation
 
-`ansible-python` is tested on Ansible 1.9.x. It likely works on older
+`ansible-python` is tested with Ansible 1.9.x. It likely works on older
 versions, but we haven't had occasion to check. README patches are
 welcome if this requirement needs amending.
 
@@ -37,12 +37,15 @@ configuration file.
 ## Testing
 
 A [Vagrantfile](http://docs.vagrantup.com/v2/vagrantfile/index.html)
-is provided for use in testing the role during development. With it,
-this role's tasks are run (via a test.yml example playbook) in a bare
-Ubuntu 14.04 virtual machine.
+is provided for testing the role within a VM during development. The
+role is invoked by an
+[Ansible provisioner](https://docs.vagrantup.com/v2/provisioning/ansible.html)
+(via a test.yml example playbook) in a bare Ubuntu 14.04 virtual
+machine.
 
 Provided Vagrant and Virtualbox are installed, run `vagrant up` from
-the root of this repository to launch and provision a VM.
+the root of this repository to launch and provision a VM. Run `vagrant
+provision` to re-run the provisioner.
 
 ## Variables
 
