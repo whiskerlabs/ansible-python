@@ -1,8 +1,4 @@
 ---
-- name: install apt packages
-  apt: name={{item}} state=installed
-  with_items: python_package_deps
-
 - name: configure a makefile for python source
   shell: ./configure {{python_configure_options}}
   args:
