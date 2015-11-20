@@ -56,7 +56,7 @@ for an exaustive list, but the following are the most likely knobs to
 be turned:
 
     python_version (default: 2.7.10)
-    python_setuptools_version (default: 18.4)
+    python_setuptools_version (default: 18.5)
     python_pip_version (default: 7.1.2)
     python_virtualenv_version (default: 13.1.2)
     python_upgrade_packaging_tools: (default: yes)
