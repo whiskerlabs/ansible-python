@@ -3,7 +3,7 @@
 python_version: 2.7.11
 python_setuptools_version: 20.7.0
 python_pip_version: 8.1.1
-python_virtualenv_version: 13.1.2
+python_virtualenv_version: 15.0.1
 
 # If yes, setuptools, pip, and virtualenv are upgraded to the latest
 # versions. The target versions defined above are still installed, but
