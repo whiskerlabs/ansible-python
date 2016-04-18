@@ -2,7 +2,7 @@
 # Target versions
 python_version: 2.7.11
 python_setuptools_version: 18.5
-python_pip_version: 7.1.2
+python_pip_version: 8.1.1
 python_virtualenv_version: 13.1.2
 
 # If yes, setuptools, pip, and virtualenv are upgraded to the latest
