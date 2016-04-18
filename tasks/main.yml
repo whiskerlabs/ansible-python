@@ -35,8 +35,11 @@
     - "{{python_pip_tgz_local_path}}"
 
 - name: install apt packages
-  apt: name={{item}} state=installed update_cache=yes
-  with_items: python_package_deps
+  apt:
+    name: "{{item}}"
+    state: installed
+    update_cache: yes
+  with_items: "{{python_package_deps}}"
 
 - include: readline.yml
 - include: python.yml
