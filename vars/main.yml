@@ -16,7 +16,7 @@ python_package_deps:
 
 # readline 6.2 tarball paths
 python_readline_6_2_tgz_file_name: readline-6.2.tar.gz
-python_readline_6_2_tgz_url: ftp://ftp.cwru.edu/pub/bash/readline-6.2.tar.gz
+python_readline_6_2_tgz_url: http://ftp.gnu.org/gnu/readline/{{python_readline_6_2_tgz_file_name}}
 python_readline_6_2_tgz_local_path: "{{python_sandbox_path}}/{{python_readline_6_2_tgz_file_name}}"
 
 # Python tarball paths
