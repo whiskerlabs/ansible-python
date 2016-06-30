@@ -3,16 +3,22 @@
 # These libraries are sufficient to build most core Python modules
 # (e.g. ssl, bz2), but the following may not be built:
 #
-#     _bsddb    _curses    _curses_panel
-#     _sqlite3  _tkinter   bsddb185
-#     dbm       dl         gdbm
-#     imageop   sunaudiodev
-python_package_deps:
+#    _bsddb             _sqlite3           _tkinter
+#    bsddb185           dbm                dl
+#    gdbm               imageop            sunaudiodev
+python_apt_package_deps:
   - build-essential
   - libbz2-dev
+  - libncurses5-dev
   - libssl-dev
   - openssl
   - zlib1g-dev
+
+python_dnf_package_deps:
+  - "@Development tools"
+  - ncurses-devel
+  - openssl-devel
+  - zlib-devel
 
 # readline 6.2 tarball paths
 python_readline_6_2_tgz_file_name: readline-6.2.tar.gz

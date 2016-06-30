@@ -37,9 +37,17 @@
 - name: install apt packages
   apt:
     name: "{{item}}"
-    state: installed
+    state: latest
     update_cache: yes
-  with_items: "{{python_package_deps}}"
+  with_items: "{{python_apt_package_deps}}"
+  when: ansible_os_family == "Debian"
+
+- name: install dnf packages
+  dnf:
+    name: "{{item}}"
+    state: latest
+  with_items: "{{python_dnf_package_deps}}"
+  when: ansible_os_family == "RedHat"
 
 - include: readline.yml
 - include: python.yml
