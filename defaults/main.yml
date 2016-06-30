@@ -1,7 +1,7 @@
 ---
 # Target versions
 python_version: 2.7.12
-python_setuptools_version: 20.7.0
+python_setuptools_version: 20.9.0
 python_pip_version: 8.1.1
 python_virtualenv_version: 15.0.1
 
