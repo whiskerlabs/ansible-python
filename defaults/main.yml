@@ -26,7 +26,7 @@ python_install_root: /usr/local
 python_bin: "{{python_install_root}}/bin"
 
 # Options passed to `./configure` when building readline 6.2
-python_readline_6_2_configure_options: --disable-shared --enable-static --prefix={{python_sandbox_path}}/readline
+python_readline_6_2_configure_options: CFLAGS=-fPIC --disable-shared --enable-static --prefix={{python_sandbox_path}}/readline
 
 # Options passed to `./configure` when building Python.
 python_configure_options: --prefix={{python_install_root}}

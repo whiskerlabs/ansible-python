@@ -4,16 +4,13 @@
   args:
     chdir: "{{python_sandbox_path}}/Python-{{python_version}}"
   environment:
-    LD_LIBRARY_PATH: "{{python_sandbox_path}}/readline/lib"
-    CPATH: "{{python_sandbox_path}}/readline/include"
+    LDFLAGS: "-L{{python_sandbox_path}}/readline/lib"
+    CFLAGS: "-I{{python_sandbox_path}}/readline/include"
 
 - name: build python from source
   shell: make -j5
   args:
     chdir: "{{python_sandbox_path}}/Python-{{python_version}}"
-  environment:
-    LD_LIBRARY_PATH: "{{python_sandbox_path}}/readline/lib"
-    CPATH: "{{python_sandbox_path}}/readline/include"
 
 - name: install python
   shell: make install
