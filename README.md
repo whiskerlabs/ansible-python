@@ -51,17 +51,18 @@ provision` to re-run the provisioner.
 
 A number of defaults and variables are provided to parameterize the
 downloaded tarball paths, options passed to `configure` scripts, and
-apt packages to install. See `defaults/main.yml` and `vars/main.yml`
-for an exaustive list, but the following are the most likely knobs to
-be turned:
+system packages to install. See `defaults/main.yml` and
+`vars/main.yml` for an exaustive list, but the following are the most
+likely knobs to be turned:
 
-    python_version (default: 2.7.11)
-    python_setuptools_version (default: 20.7.0)
+    python_version (default: 2.7.12)
+    python_setuptools_version (default: 20.9.0)
     python_pip_version (default: 8.1.1)
     python_virtualenv_version (default: 15.0.1)
     python_upgrade_packaging_tools: (default: yes)
     python_install_root (default: /usr/local)
-    python_package_deps (default: [build-essential, libbz2-dev, libssl-dev, openssl, zlib1g-dev])
+    python_apt_package_deps (default: [build-essential, libbz2-dev, libssl-dev, openssl, zlib1g-dev])
+    python_dnf_package_deps (default: [@Development tools, ncurses-devel, openssl-devel, zlib-devel])
 
 ## Support
 
