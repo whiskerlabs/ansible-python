@@ -37,5 +37,5 @@ python_setuptools_tgz_local_path: "{{python_sandbox_path}}/{{python_setuptools_t
 
 # pip tarball paths
 python_pip_tgz_file_name: pip-{{python_pip_version}}.tar.gz
-python_pip_tgz_url: http://pypi.python.org/packages/source/p/pip/{{python_pip_tgz_file_name}}
+python_pip_tgz_url: https://pypi.python.org/packages/source/p/pip/{{python_pip_tgz_file_name}}
 python_pip_tgz_local_path: "{{python_sandbox_path}}/{{python_pip_tgz_file_name}}"
